@@ -31,11 +31,11 @@ public class FeignController {
     public void setItemClient(ItemClient itemClient) {
         this.itemClient = itemClient;
     }
-
+    @Autowired
     public void setUserClient(UserClient userClient) {
         this.userClient = userClient;
     }
-
+    @Autowired
     public void setOrderClient(OrderClient orderClient) {
         this.orderClient = orderClient;
     }
