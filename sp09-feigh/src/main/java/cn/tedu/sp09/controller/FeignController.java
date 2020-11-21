@@ -9,10 +9,7 @@ import cn.tedu.sp09.feign.UserClient;
 import cn.tedu.web.util.JsonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -43,7 +40,7 @@ public class FeignController {
     public JsonResult<List<Item>> getItems(@PathVariable String orderId){
         return itemClient.getItems(orderId);
     }
-    @GetMapping("/item-service/decreaseNumber")
+    @PostMapping("/item-service/decreaseNumber")
     public JsonResult<List<Item>> decreaseNumber(@RequestBody List<Item> items){
         return itemClient.decreaseNumber(items);
     }
