@@ -16,6 +16,6 @@ public interface UserClient {
     @GetMapping("/{userId}")
     JsonResult<User> getUser(@PathVariable Integer userId);
 
-    @GetMapping("{userId}/score")
+    @GetMapping("/{userId}/score")
     JsonResult addScore(@PathVariable Integer userId, @RequestParam Integer score);
 }
