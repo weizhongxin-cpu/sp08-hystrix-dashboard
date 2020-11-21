@@ -14,7 +14,7 @@ import java.util.List;
  * Administrator
  * 2020/11/21 - 18:32
  */
-@FeignClient(name = "item-service")
+@FeignClient(name = "item-service",fallback = ItemClientFB.class)
 public interface ItemClient {
     @GetMapping("/{orderId}")
     JsonResult<List<Item>> getItems(@PathVariable String orderId);

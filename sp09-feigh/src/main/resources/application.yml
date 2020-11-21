@@ -16,3 +16,13 @@ ribbon:
 item-service:
   ribbon:
     MaxAutoRetries: 0
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

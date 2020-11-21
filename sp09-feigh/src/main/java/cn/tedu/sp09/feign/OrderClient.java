@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * Administrator
  * 2020/11/21 - 18:59
  */
-@FeignClient(name = "order-service")
+@FeignClient(name = "order-service",fallback = OrderClientFB.class)
 public interface OrderClient {
     @GetMapping("/{orderId}")
     JsonResult<Order> getOrder(@PathVariable String orderId);

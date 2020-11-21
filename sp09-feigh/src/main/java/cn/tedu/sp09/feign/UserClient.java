@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Administrator
  * 2020/11/21 - 18:55
  */
-@FeignClient(name = "user-service")
+@FeignClient(name = "user-service",fallback = UserClientFB.class)
 public interface UserClient {
     @GetMapping("/{userId}")
     JsonResult<User> getUser(@PathVariable Integer userId);
