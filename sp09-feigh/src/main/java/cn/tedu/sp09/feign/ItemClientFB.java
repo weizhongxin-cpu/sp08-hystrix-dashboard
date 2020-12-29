@@ -12,7 +12,7 @@ import java.util.List;
  * 2020/11/21 - 21:18
  */
 @Component
-public class ItemClientFB  implements ItemClient{
+public class ItemClientFB implements ItemClient {
     @Override
     public JsonResult<List<Item>> getItems(String orderId) {
         return JsonResult.err().msg("获取订单商品列表失败！");
