@@ -1,11 +1,9 @@
 package cn.tedu.sp04.order.service;
 
-import org.springframework.stereotype.Service;
-
 import cn.tedu.sp01.pojo.Order;
 import cn.tedu.sp01.service.OrderService;
-
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import static sun.security.ssl.SSLLogger.info;
 
@@ -26,7 +24,7 @@ public class OrderServiceImpl implements OrderService {
     public void addOrder(Order order) {
         //TODO: 调用item-service减少商品库存
         //TODO: 调用user-service增加用户积分
-        info("保存订单："+order);
+        info("保存订单：" + order);
     }
 
 }
