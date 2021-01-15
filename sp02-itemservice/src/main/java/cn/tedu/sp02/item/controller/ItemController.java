@@ -25,9 +25,9 @@ public class ItemController {
         log.info("server.port=" + port + ", orderId=" + orderId);
 
         ///--设置随机延迟
-        if (Math.random() < 0.6) {
+        if (Math.random() < 0.7) {
             long t = new Random().nextInt(5000);
-            log.info("item-service-" + port + " - 暂停 " + t);
+            log.info("item-service-" + port + " - 延迟 " + t);
             Thread.sleep(t);
         }
 
